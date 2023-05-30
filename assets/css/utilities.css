@@ -1,0 +1,128 @@
+[data-overlay] {
+	position: relative;
+}
+[data-overlay]::before {
+	background: #07294d none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+[data-overlay="3"]::before {
+	opacity: 0.3;
+}
+[data-overlay="4"]::before {
+	opacity: 0.4;
+}
+[data-overlay="5"]::before {
+	opacity: 0.5;
+}
+[data-overlay="6"]::before {
+	opacity: 0.6;
+}
+[data-overlay="7"]::before {
+	opacity: 0.7;
+}
+[data-overlay="8"]::before {
+	opacity: 0.8;
+}
+[data-overlay="9"]::before {
+	opacity: 0.9;
+}
+ul.live-virtual {
+  list-style: none;
+  padding: 0;
+}
+ul.live-virtual li {
+  padding:5px 5px 5px 25px;
+  font-size:16px;
+  color:#999999;
+  position:relative;
+}
+ul.live-virtual li:last-child {border:0;}
+ul.live-virtual li:before {
+  content: "\f05b"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size:18px;
+  position:absolute; left:5px; top:6px;
+  color:#f8b425;
+}
+.ibmfont {font-size:50px; font-weight: bold;}
+p{font-size: 16px;}
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+
+.font-40 {
+  font-size: 40px;
+}
+
+.font-300 {font-weight: 300;}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.header-title {
+  font-size: 16px;
+}
+.card-title {
+  font-size: 16px;
+}
+
+.cardshadow {webkit-box-shadow: 0px 5px 5px 0px rgba(194,194,194,.6);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(194,194,194,.6);
+  box-shadow: 0px 5px 5px 0px rgba(194,194,194,.6);}
+
+ul.listview {
+  list-style: none;
+  padding: 0;
+}
+ul.listview li {
+  padding-left: 1.3em;
+}
+ul.listview li:before {
+  content: "\f0da"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1em; /* same as padding-left set on li */
+  width: 1em; /* same as padding-left set on li */
+
+}

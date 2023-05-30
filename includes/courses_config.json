@@ -1,0 +1,14 @@
+{
+	"reactjs":{
+		"bannerClass":"reactjs",
+		"Title":"DevOps Certification Training Course in",
+		"description":"<h5 class=\"mb-2\">7 in 1 Combo Program With Value Add Live Courses</h5><p class=\"font-weight-bold\"> 1. Dockers and Kubernetes <br />2. AWS Technical Essentials <br />3. Terraform <br />4. Jenkins and JUnit <br /> 5. Agile <br />6. Java Fundamentals <br /> 7. Linux Fundamentals  </p><p><a class=\"btn btn-lg btn-danger\" data-toggle=\"modal\" data-target=\"#myModal\" ng-click=\"modalopenbutton('Download Curriculum')\" href=\"#\" role=\"button\">Download Curriculum </a></p>",
+		"courseHightlight":["images/bannertwo/2.png", "images/bannertwo/3.png", "images/bannertwo/4.png"],
+		"clientImages":["images/alumini/1.jpg", "images/alumini/2.jpg", "images/alumini/3.jpg"],
+		
+
+	},
+	"angular":{
+
+	}
+}
