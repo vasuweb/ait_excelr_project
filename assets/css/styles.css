@@ -415,3 +415,16 @@ Custom css
 .d-map-none {
     display:none !important;
 }
+
+.bg-bluelite {
+    background: #1C92EC;
+}
+
+.learning-path {
+    background: url(../images/courses/devOps/process_bg_lp.jpg) no-repeat;
+    width: 100%;
+    padding-top: 15px;
+    position: relative;
+    min-height: 320px;
+    display: block;
+}

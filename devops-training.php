@@ -60,361 +60,361 @@ src="https://www.facebook.com/tr?id=127624404531017&ev=PageView&noscript=1"
       <link rel="shortcut icon" href="https://excelrcom.b-cdn.net/assets/favicon.png?v=0" type="image/x-icon">
       <title>DevOps Architect (SAA-CO2)</title>	  
       	  
-      <script src="./angular/angular.min.js"></script> 
+      <!-- <script src="./angular/angular.min.js"></script>  -->
       
 <script>
-var app = angular.module("enquiry", []);
+// var app = angular.module("enquiry", []);
          
-app.controller('report', function($scope, $http,$window,$timeout) {
+// app.controller('report', function($scope, $http,$window,$timeout) {
          
-//    var enquirydata = $.param({
-// 	userid:"2000198755",
-// 	 password:"zvGTvdkAT",
-// 	phone_number:"918885767996",
-// 	 v:"1.1",
-// 	auth_scheme:"plain",
-// 	channel:"WHATSAPP"});
-//   var config = {
-// 	  headers : {
-// 		  'Content-Type': 'application/x-www-form-urlencoded'
-// 	  }
-//   }
-// //console.log(enquirydata);
-// $http.post('https://media.smsgupshup.com/GatewayAPI/rest?method=OPT_IN&format=json',enquirydata,config).success(function(data) {
-// 	console.log(data);
+// //    var enquirydata = $.param({
+// // 	userid:"2000198755",
+// // 	 password:"zvGTvdkAT",
+// // 	phone_number:"918885767996",
+// // 	 v:"1.1",
+// // 	auth_scheme:"plain",
+// // 	channel:"WHATSAPP"});
+// //   var config = {
+// // 	  headers : {
+// // 		  'Content-Type': 'application/x-www-form-urlencoded'
+// // 	  }
+// //   }
+// // //console.log(enquirydata);
+// // $http.post('https://media.smsgupshup.com/GatewayAPI/rest?method=OPT_IN&format=json',enquirydata,config).success(function(data) {
+// // 	console.log(data);
   
-// });
+// // });
 
-	//	 $http.get('https://media.smsgupshup.com/GatewayAPI/rest?method=OPT_IN&format=json&userid=2000198755&password=zvGTvdkAT&phone_number=918885767996&v=1.1&auth_scheme=plain&channel=WHATSAPP').success(function(res) {
-         	//	 res.header("Access-Control-Allow-Origin", "*");
-             //    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-         	//	console.log(data);
-         //	});
-    //var thanku = window.location.origin+window.location.pathname+'thanku.php';
-			var siteurl = window.location.origin+window.location.pathname;
-			var thanku = 'https://excelr.in/thankyou/';
-			$scope.processing = 0;
-			$scope.storeeamil = (email) =>{
-				let obj = {
-					url : "https://excelr.in/thankyou/downloads/DevOps_Solution_Architect_Course_Agenda.pdf",
-					email : email
-				}
-				localStorage.setItem("pdfurl", JSON.stringify(obj));
-			}
+// 	//	 $http.get('https://media.smsgupshup.com/GatewayAPI/rest?method=OPT_IN&format=json&userid=2000198755&password=zvGTvdkAT&phone_number=918885767996&v=1.1&auth_scheme=plain&channel=WHATSAPP').success(function(res) {
+//          	//	 res.header("Access-Control-Allow-Origin", "*");
+//              //    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//          	//	console.log(data);
+//          //	});
+//     //var thanku = window.location.origin+window.location.pathname+'thanku.php';
+// 			var siteurl = window.location.origin+window.location.pathname;
+// 			var thanku = 'https://excelr.in/thankyou/';
+// 			$scope.processing = 0;
+// 			$scope.storeeamil = (email) =>{
+// 				let obj = {
+// 					url : "https://excelr.in/thankyou/downloads/DevOps_Solution_Architect_Course_Agenda.pdf",
+// 					email : email
+// 				}
+// 				localStorage.setItem("pdfurl", JSON.stringify(obj));
+// 			}
 			
-			var exqfrom = 'excelr.in';
-			var urlpath = window.location.href;
-			setTimeout(function() {
-				$scope.afterfewsec();
-			}, 3000);
-			$scope.afterfewsec = ()=>{
-				let location = "";
-				webengage.track("Page Viewed - excelr.in", {
-					"Course" : "DevOps",
-					"PageURL" : urlpath,
-					"Location"   : location,
-					"LandingPage" : siteurl
-				});
-			};
-			var modeltimer = $timeout(function() {
-				$('#onloadpopup').modal();
-			}, 30000);
-			$scope.modalopenbutton  = function(title){
-				$timeout.cancel(modeltimer);
-				if(title=='Download Curriculum'){
-					$scope.downloadtitle = 'Download Curriculum';
-					let location = "";
-					webengage.track("Download Curriculum Clicked", {
-						"Course" : "DevOps",
-						"PageURL" : urlpath,
-						"Location"   : location
-					});
-				} else {
-					$scope.downloadtitle = title;
-					let location = "";
-					webengage.track("Enroll Now Initiated", {
-						"Course" : $scope.downloadtitle,
-						"PageURL" : urlpath,
-						"Location"   : location
-					});	
-				}
-			}
-		$scope.submitmodalonload = function(std){
-         	if ($("#modalonload").valid()){
-				$scope.processing = 1;
-				std.course = "Popup";
-				std.weburl = urlpath;
-				std.coursebitrix = "DevOps";
-         		std.source = "";
-         		std.medium = "";
-         		std.campaign = "";
-				std.device = "";
-				std.adgroup = "";
-				std.term = "";
-				std.location = "";
+// 			var exqfrom = 'excelr.in';
+// 			var urlpath = window.location.href;
+// 			setTimeout(function() {
+// 				$scope.afterfewsec();
+// 			}, 3000);
+// 			$scope.afterfewsec = ()=>{
+// 				let location = "";
+// 				webengage.track("Page Viewed - excelr.in", {
+// 					"Course" : "DevOps",
+// 					"PageURL" : urlpath,
+// 					"Location"   : location,
+// 					"LandingPage" : siteurl
+// 				});
+// 			};
+// 			var modeltimer = $timeout(function() {
+// 				$('#onloadpopup').modal();
+// 			}, 30000);
+// 			$scope.modalopenbutton  = function(title){
+// 				$timeout.cancel(modeltimer);
+// 				if(title=='Download Curriculum'){
+// 					$scope.downloadtitle = 'Download Curriculum';
+// 					let location = "";
+// 					webengage.track("Download Curriculum Clicked", {
+// 						"Course" : "DevOps",
+// 						"PageURL" : urlpath,
+// 						"Location"   : location
+// 					});
+// 				} else {
+// 					$scope.downloadtitle = title;
+// 					let location = "";
+// 					webengage.track("Enroll Now Initiated", {
+// 						"Course" : $scope.downloadtitle,
+// 						"PageURL" : urlpath,
+// 						"Location"   : location
+// 					});	
+// 				}
+// 			}
+// 		$scope.submitmodalonload = function(std){
+//          	if ($("#modalonload").valid()){
+// 				$scope.processing = 1;
+// 				std.course = "Popup";
+// 				std.weburl = urlpath;
+// 				std.coursebitrix = "DevOps";
+//          		std.source = "";
+//          		std.medium = "";
+//          		std.campaign = "";
+// 				std.device = "";
+// 				std.adgroup = "";
+// 				std.term = "";
+// 				std.location = "";
 
-				std.utm_channel = "";
-				std.utm_type = "";
-				std.utm_variety = "";
-				std.utm_experiment = "";
-				webengage.user.login(std.mobile);
-				webengage.user.setAttribute("we_first_name", std.name);
-				webengage.user.setAttribute("we_email", std.email);
-				webengage.user.setAttribute('we_phone', std.mobile);
-				webengage.user.setAttribute("Location", std.location);
-				webengage.user.setAttribute("Course", std.course);
-				webengage.user.setAttribute("Landing Page", urlpath);
-				webengage.user.setAttribute("Enquiry From", exqfrom);
+// 				std.utm_channel = "";
+// 				std.utm_type = "";
+// 				std.utm_variety = "";
+// 				std.utm_experiment = "";
+// 				webengage.user.login(std.mobile);
+// 				webengage.user.setAttribute("we_first_name", std.name);
+// 				webengage.user.setAttribute("we_email", std.email);
+// 				webengage.user.setAttribute('we_phone', std.mobile);
+// 				webengage.user.setAttribute("Location", std.location);
+// 				webengage.user.setAttribute("Course", std.course);
+// 				webengage.user.setAttribute("Landing Page", urlpath);
+// 				webengage.user.setAttribute("Enquiry From", exqfrom);
 				  	
-				webengage.track("Enquiry Form Onload - excelr.in", {
-					"eventTitle" : "DevOps-Popup",
-					"StudentName"      : std.name,
-					"StudentEmail"   : std.email,
-					"StudentMobile" : std.mobile,
-					"Course" : std.course,
-					"PageURL" : urlpath,
-					"Location"   : std.location
-				});
-				$scope.storeeamil(std.email);
-         		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
-					$scope.processing = 0;
-				  //console.log(data);
-				  // alert("Your Query Submitted Successfully");
-				  std.name = null;
-				  std.email = null;
-				  std.mobile = null;
-				  window.open(thanku, '_blank');
-         		});
-         	}	
-         }	
+// 				webengage.track("Enquiry Form Onload - excelr.in", {
+// 					"eventTitle" : "DevOps-Popup",
+// 					"StudentName"      : std.name,
+// 					"StudentEmail"   : std.email,
+// 					"StudentMobile" : std.mobile,
+// 					"Course" : std.course,
+// 					"PageURL" : urlpath,
+// 					"Location"   : std.location
+// 				});
+// 				$scope.storeeamil(std.email);
+//          		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
+// 					$scope.processing = 0;
+// 				  //console.log(data);
+// 				  // alert("Your Query Submitted Successfully");
+// 				  std.name = null;
+// 				  std.email = null;
+// 				  std.mobile = null;
+// 				  window.open(thanku, '_blank');
+//          		});
+//          	}	
+//          }	
          
-         $scope.formsubmit = function(std){
-         	if ($("#formvalidate").valid()){
-				$scope.processing = 0;
-				std.weburl = urlpath;
-				std.coursebitrix = "DevOps";
-         		std.course = $scope.downloadtitle;
-         		std.source = "";
-         		std.medium = "";
-         		std.campaign = "";
-				std.device = "";
-				std.adgroup = "";
-				std.term = "";
-				std.location = "";
+//          $scope.formsubmit = function(std){
+//          	if ($("#formvalidate").valid()){
+// 				$scope.processing = 0;
+// 				std.weburl = urlpath;
+// 				std.coursebitrix = "DevOps";
+//          		std.course = $scope.downloadtitle;
+//          		std.source = "";
+//          		std.medium = "";
+//          		std.campaign = "";
+// 				std.device = "";
+// 				std.adgroup = "";
+// 				std.term = "";
+// 				std.location = "";
 
-				std.utm_channel = "";
-				std.utm_type = "";
-				std.utm_variety = "";
-				std.utm_experiment = "";
-         		  //console.log(std);
-				webengage.user.login(std.mobile);
-				webengage.user.setAttribute("we_first_name", std.name);
-				webengage.user.setAttribute("we_email", std.email);
-				webengage.user.setAttribute('we_phone', std.mobile);
-				webengage.user.setAttribute("Location", std.location);
-				webengage.user.setAttribute("Course", $scope.downloadtitle);
-				webengage.user.setAttribute("Landing Page", urlpath);
-				webengage.user.setAttribute("Enquiry From", exqfrom);
-				if($scope.downloadtitle=='DevOps Download Curriculum'){
-					var submittitle = "Download Curriculum Submitted - excelr.in";
-				} else {
-					var submittitle = "Enquiry Form Submitted - excelr.in";
-				}
+// 				std.utm_channel = "";
+// 				std.utm_type = "";
+// 				std.utm_variety = "";
+// 				std.utm_experiment = "";
+//          		  //console.log(std);
+// 				webengage.user.login(std.mobile);
+// 				webengage.user.setAttribute("we_first_name", std.name);
+// 				webengage.user.setAttribute("we_email", std.email);
+// 				webengage.user.setAttribute('we_phone', std.mobile);
+// 				webengage.user.setAttribute("Location", std.location);
+// 				webengage.user.setAttribute("Course", $scope.downloadtitle);
+// 				webengage.user.setAttribute("Landing Page", urlpath);
+// 				webengage.user.setAttribute("Enquiry From", exqfrom);
+// 				if($scope.downloadtitle=='DevOps Download Curriculum'){
+// 					var submittitle = "Download Curriculum Submitted - excelr.in";
+// 				} else {
+// 					var submittitle = "Enquiry Form Submitted - excelr.in";
+// 				}
 				
-				webengage.track(submittitle, {
-					"eventTitle" : "Download Curriculum Submit",
-					"StudentName"      : std.name,
-					"StudentEmail"   : std.email,
-					"StudentMobile" : std.mobile,
-					"Course" : $scope.downloadtitle,
-					"PageURL" : urlpath,
-					"Location"   : std.location
-				});
-				$scope.storeeamil(std.email);
-         		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
-					$scope.processing = 0;
-         			 // console.log(data);
-         			 // alert("Your Query Submitted Successfully");
-         			  std.name = null;
-         			  std.email = null;
-         			  std.mobile = null;
-         			  window.open(thanku, '_blank');
+// 				webengage.track(submittitle, {
+// 					"eventTitle" : "Download Curriculum Submit",
+// 					"StudentName"      : std.name,
+// 					"StudentEmail"   : std.email,
+// 					"StudentMobile" : std.mobile,
+// 					"Course" : $scope.downloadtitle,
+// 					"PageURL" : urlpath,
+// 					"Location"   : std.location
+// 				});
+// 				$scope.storeeamil(std.email);
+//          		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
+// 					$scope.processing = 0;
+//          			 // console.log(data);
+//          			 // alert("Your Query Submitted Successfully");
+//          			  std.name = null;
+//          			  std.email = null;
+//          			  std.mobile = null;
+//          			  window.open(thanku, '_blank');
          			  
          			
-         		});
-         	}	
-         }
+//          		});
+//          	}	
+//          }
          
-         $scope.formsubmit2 = function(std){
-         	if ($("#formvalidate2").valid()){
-				$scope.processing = 1;
-				std.weburl = urlpath;
-				std.coursebitrix = "DevOps";
-         		std.course = $scope.downloadtitle;
-         		std.source = "";
-         		std.medium = "";
-         		std.campaign = "";
-				std.device = "";
-				std.adgroup = "";
-				std.term = "";
-				std.location = "";
+//          $scope.formsubmit2 = function(std){
+//          	if ($("#formvalidate2").valid()){
+// 				$scope.processing = 1;
+// 				std.weburl = urlpath;
+// 				std.coursebitrix = "DevOps";
+//          		std.course = $scope.downloadtitle;
+//          		std.source = "";
+//          		std.medium = "";
+//          		std.campaign = "";
+// 				std.device = "";
+// 				std.adgroup = "";
+// 				std.term = "";
+// 				std.location = "";
 
-				std.utm_channel = "";
-				std.utm_type = "";
-				std.utm_variety = "";
-				std.utm_experiment = "";
-         		  //console.log(std);
-				webengage.user.login(std.mobile);
-				webengage.user.setAttribute("we_first_name", std.name);
-				webengage.user.setAttribute("we_email", std.email);
-				webengage.user.setAttribute('we_phone', std.mobile);
-				webengage.user.setAttribute("Location", std.location);
-				webengage.user.setAttribute("Course", $scope.downloadtitle);
-				webengage.user.setAttribute("Landing Page", urlpath);
-				webengage.user.setAttribute("Enquiry From", exqfrom);
-				if($scope.downloadtitle=='DevOps Download Curriculum'){
-					var submittitle = "Download Curriculum Submitted - excelr.in";
-				} else {
-					var submittitle = "Enquiry Form Submitted - excelr.in";
-				}
+// 				std.utm_channel = "";
+// 				std.utm_type = "";
+// 				std.utm_variety = "";
+// 				std.utm_experiment = "";
+//          		  //console.log(std);
+// 				webengage.user.login(std.mobile);
+// 				webengage.user.setAttribute("we_first_name", std.name);
+// 				webengage.user.setAttribute("we_email", std.email);
+// 				webengage.user.setAttribute('we_phone', std.mobile);
+// 				webengage.user.setAttribute("Location", std.location);
+// 				webengage.user.setAttribute("Course", $scope.downloadtitle);
+// 				webengage.user.setAttribute("Landing Page", urlpath);
+// 				webengage.user.setAttribute("Enquiry From", exqfrom);
+// 				if($scope.downloadtitle=='DevOps Download Curriculum'){
+// 					var submittitle = "Download Curriculum Submitted - excelr.in";
+// 				} else {
+// 					var submittitle = "Enquiry Form Submitted - excelr.in";
+// 				}
 				
-				webengage.track(submittitle, {
-					"eventTitle" : "Download Curriculum Submit",
-					"StudentName"      : std.name,
-					"StudentEmail"   : std.email,
-					"StudentMobile" : std.mobile,
-					"Course" : $scope.downloadtitle,
-					"PageURL" : urlpath,
-					"Location"   : std.location
-				});
-				$scope.storeeamil(std.email);
-         		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
-					$scope.processing = 0;
-         			 // console.log(data);
-         			 // alert("Your Query Submitted Successfully");
-         			  std.name = null;
-         			  std.email = null;
-         			  std.mobile = null;
-         			  window.open(thanku, '_blank');
-         		});
-         	}	
-         }
+// 				webengage.track(submittitle, {
+// 					"eventTitle" : "Download Curriculum Submit",
+// 					"StudentName"      : std.name,
+// 					"StudentEmail"   : std.email,
+// 					"StudentMobile" : std.mobile,
+// 					"Course" : $scope.downloadtitle,
+// 					"PageURL" : urlpath,
+// 					"Location"   : std.location
+// 				});
+// 				$scope.storeeamil(std.email);
+//          		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
+// 					$scope.processing = 0;
+//          			 // console.log(data);
+//          			 // alert("Your Query Submitted Successfully");
+//          			  std.name = null;
+//          			  std.email = null;
+//          			  std.mobile = null;
+//          			  window.open(thanku, '_blank');
+//          		});
+//          	}	
+//          }
 
-         $scope.formsubmit3 = function(std){
-         	if ($("#formvalidate3").valid()){
-				$scope.processing = 1;
-				std.weburl = urlpath;
-				std.coursebitrix = "DevOps";
-         		std.course = $scope.downloadtitle;
-         		std.source = "";
-         		std.medium = "";
-         		std.campaign = "";
-				std.device = "";
-				std.adgroup = "";
-				std.term = "";
-				std.location = "";
+//          $scope.formsubmit3 = function(std){
+//          	if ($("#formvalidate3").valid()){
+// 				$scope.processing = 1;
+// 				std.weburl = urlpath;
+// 				std.coursebitrix = "DevOps";
+//          		std.course = $scope.downloadtitle;
+//          		std.source = "";
+//          		std.medium = "";
+//          		std.campaign = "";
+// 				std.device = "";
+// 				std.adgroup = "";
+// 				std.term = "";
+// 				std.location = "";
 
-				std.utm_channel = "";
-				std.utm_type = "";
-				std.utm_variety = "";
-				std.utm_experiment = "";
-         		  //console.log(std);
-				webengage.user.login(std.mobile);
-				webengage.user.setAttribute("we_first_name", std.name);
-				webengage.user.setAttribute("we_email", std.email);
-				webengage.user.setAttribute('we_phone', std.mobile);
-				webengage.user.setAttribute("Location", std.location);
-				webengage.user.setAttribute("Course", $scope.downloadtitle);
-				webengage.user.setAttribute("Landing Page", urlpath);
-				webengage.user.setAttribute("Enquiry From", exqfrom);
-				if($scope.downloadtitle=='DevOps Download Curriculum'){
-					var submittitle = "Download Curriculum Submitted - excelr.in";
-				} else {
-					var submittitle = "Enquiry Form Submitted - excelr.in";
-				}
+// 				std.utm_channel = "";
+// 				std.utm_type = "";
+// 				std.utm_variety = "";
+// 				std.utm_experiment = "";
+//          		  //console.log(std);
+// 				webengage.user.login(std.mobile);
+// 				webengage.user.setAttribute("we_first_name", std.name);
+// 				webengage.user.setAttribute("we_email", std.email);
+// 				webengage.user.setAttribute('we_phone', std.mobile);
+// 				webengage.user.setAttribute("Location", std.location);
+// 				webengage.user.setAttribute("Course", $scope.downloadtitle);
+// 				webengage.user.setAttribute("Landing Page", urlpath);
+// 				webengage.user.setAttribute("Enquiry From", exqfrom);
+// 				if($scope.downloadtitle=='DevOps Download Curriculum'){
+// 					var submittitle = "Download Curriculum Submitted - excelr.in";
+// 				} else {
+// 					var submittitle = "Enquiry Form Submitted - excelr.in";
+// 				}
 				
-				webengage.track(submittitle, {
-					"eventTitle" : "Enquiry Submitted",
-					"StudentName"      : std.name,
-					"StudentEmail"   : std.email,
-					"StudentMobile" : std.mobile,
-					"Course" : $scope.downloadtitle,
-					"PageURL" : urlpath,
-					"Location"   : std.location
-				});
-				$scope.storeeamil(std.email);
-         		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
-					$scope.processing = 0;
-         			 // console.log(data);
-         			 // alert("Your Query Submitted Successfully");
-         			  std.name = null;
-         			  std.email = null;
-         			  std.mobile = null;
-         			  window.open(thanku, '_blank');
-         		});
-         	}	
-         }
+// 				webengage.track(submittitle, {
+// 					"eventTitle" : "Enquiry Submitted",
+// 					"StudentName"      : std.name,
+// 					"StudentEmail"   : std.email,
+// 					"StudentMobile" : std.mobile,
+// 					"Course" : $scope.downloadtitle,
+// 					"PageURL" : urlpath,
+// 					"Location"   : std.location
+// 				});
+// 				$scope.storeeamil(std.email);
+//          		$http.post('../enquiry_config/enquiry.php',std).success(function(data) {
+// 					$scope.processing = 0;
+//          			 // console.log(data);
+//          			 // alert("Your Query Submitted Successfully");
+//          			  std.name = null;
+//          			  std.email = null;
+//          			  std.mobile = null;
+//          			  window.open(thanku, '_blank');
+//          		});
+//          	}	
+//          }
 
-         $scope.formsubmit4 = function(std){
-            if ($("#formvalidate4").valid()){
-				$scope.processing = 0;
-			std.weburl = urlpath;
-			// std.coursebitrix = "DevOps";
-               //console.log(std);
-              	std.course = "DevOps";
-				std.source = "";
-				std.medium = "";
-				std.campaign = "";
-				std.device = "";
-				std.adgroup = "";
-				std.term = "";
-				std.location = "";
+//          $scope.formsubmit4 = function(std){
+//             if ($("#formvalidate4").valid()){
+// 				$scope.processing = 0;
+// 			std.weburl = urlpath;
+// 			// std.coursebitrix = "DevOps";
+//                //console.log(std);
+//               	std.course = "DevOps";
+// 				std.source = "";
+// 				std.medium = "";
+// 				std.campaign = "";
+// 				std.device = "";
+// 				std.adgroup = "";
+// 				std.term = "";
+// 				std.location = "";
 
-				std.utm_channel = "";
-				std.utm_type = "";
-				std.utm_variety = "";
-				std.utm_experiment = "";
-				webengage.user.login(std.mobile);
-				webengage.user.setAttribute("we_first_name", std.name);
-				webengage.user.setAttribute("we_email", std.email);
-				webengage.user.setAttribute('we_phone', std.mobile);
-				webengage.user.setAttribute("Location", std.location);
-				webengage.user.setAttribute("Course", $scope.downloadtitle);
-				webengage.user.setAttribute("Landing Page", urlpath);
-				webengage.user.setAttribute("Enquiry From", exqfrom);
+// 				std.utm_channel = "";
+// 				std.utm_type = "";
+// 				std.utm_variety = "";
+// 				std.utm_experiment = "";
+// 				webengage.user.login(std.mobile);
+// 				webengage.user.setAttribute("we_first_name", std.name);
+// 				webengage.user.setAttribute("we_email", std.email);
+// 				webengage.user.setAttribute('we_phone', std.mobile);
+// 				webengage.user.setAttribute("Location", std.location);
+// 				webengage.user.setAttribute("Course", $scope.downloadtitle);
+// 				webengage.user.setAttribute("Landing Page", urlpath);
+// 				webengage.user.setAttribute("Enquiry From", exqfrom);
 				  	
 				
-				webengage.track("Webinar Form - excelr.in", {
-					"eventTitle" : "DevOps Webinar Submit",
-					"StudentName"      : std.name,
-					"StudentEmail"   : std.email,
-					"StudentMobile" : std.mobile,
-					"Course" : $scope.downloadtitle,
-					"PageURL" : urlpath,
-					"Location"   : std.location
-				});
-				$scope.storeeamil(std.email);
-               $http.post('../enquiry_config/webinar.php',std).success(function(data) {
-				$scope.processing = 0;
-                 // console.log(data);
-                  // alert("Your Query Submitted Successfully");
-                  std.name = null;
-                  std.email = null;
-                  std.mobile = null;
-				  std.city = null;
-                  window.open(thanku, '_blank');
-               });
-            }	
-         }
-	$scope.showmore = 0;
-	$scope.clickformore =()=>{
-		$scope.showmore = 1;
-	}
+// 				webengage.track("Webinar Form - excelr.in", {
+// 					"eventTitle" : "DevOps Webinar Submit",
+// 					"StudentName"      : std.name,
+// 					"StudentEmail"   : std.email,
+// 					"StudentMobile" : std.mobile,
+// 					"Course" : $scope.downloadtitle,
+// 					"PageURL" : urlpath,
+// 					"Location"   : std.location
+// 				});
+// 				$scope.storeeamil(std.email);
+//                $http.post('../enquiry_config/webinar.php',std).success(function(data) {
+// 				$scope.processing = 0;
+//                  // console.log(data);
+//                   // alert("Your Query Submitted Successfully");
+//                   std.name = null;
+//                   std.email = null;
+//                   std.mobile = null;
+// 				  std.city = null;
+//                   window.open(thanku, '_blank');
+//                });
+//             }	
+//          }
+// 	$scope.showmore = 0;
+// 	$scope.clickformore =()=>{
+// 		$scope.showmore = 1;
+// 	}
 
-	$scope.clickforless =()=>{
-		$scope.showmore = 0;
-	}	 
-});
+// 	$scope.clickforless =()=>{
+// 		$scope.showmore = 0;
+// 	}	 
+// });
 </script>
 <script id='_webengage_script_tag' type='text/javascript'>
 var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
@@ -493,22 +493,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row no-gutters">
 
                <div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/2.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/2.png" class="img-fluid w-100">				
                </div>
                <div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/3.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/3.png" class="img-fluid w-100">				
                </div>
                <div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/4.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/4.png" class="img-fluid w-100">				
                </div>
                <div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/5.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/5.png" class="img-fluid w-100">				
                </div>
                <div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/6.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/6.png" class="img-fluid w-100">				
                </div>
 		<div class="col-6 col-md-2">
-                  <img src="./assets/images/bannertwo/7.png" class="img-fluid w-100">				
+                  <img src="./assets/images/courses/devOps/7.png" class="img-fluid w-100">				
                </div>
             </div>
          </div>
@@ -518,109 +518,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
                <div class="carousel-inner w-100" role="listbox">
+                  <!-- <div class="carousel-item active">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/1.jpg">                        
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/2.jpg">                        
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/3.jpg">                        
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/4.jpg">                        
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/5.jpg">                        
+                     </div>
+                  </div> -->
                   <div class="carousel-item active">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/1.jpg">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/6.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/2.jpg">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/7.png">                        
+                     </div>
+                  </div>
+                  <!-- <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/8.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/3.jpg">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/9.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/4.jpg">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/10.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/5.jpg">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/11.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/6.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/12.png">
+                     </div>
+                  </div> -->
+                  <div class="carousel-item">
+                     <div class="col-lg-3 col-md-6 text-center bg-white">
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/13.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/7.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/14.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/8.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/15.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/9.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/16.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/10.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/17.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/11.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/18.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/12.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/19.png">                        
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/13.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/14.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/15.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/16.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/17.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/18.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/19.png">                        
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="col-lg-3 col-md-6 text-center bg-white">
-                        <img class="img-fluid lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/alumini/20.png">                        
+                        <img class="img-fluid lazy" src="./assets/images/courses/devOps/20.png">                        
                      </div>
                   </div>
                </div>
                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-               <i class="fa fa-chevron-left fa-lg text-muted"></i>				</a>
+               	<i class="fa fa-chevron-left fa-lg text-muted"></i>				
+           		</a>
                <a class="carousel-control-next text-faded" href="#myCarousel" role="button" data-slide="next">
                <i class="fa fa-chevron-right fa-lg text-muted"></i>				</a>            
             </div>
@@ -633,7 +634,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="col-md-3 form-group">
                   <div class="card p-1">
                      <div class="card-header">
-                        <div class="text-center"><img src="./assets/images/programme/icon1.png"></div>
+                        <div class="text-center"><img src="./assets/images/courses/devOps/icon1.png"></div>
                      </div>
                      <div class="card-body p-2">
                         <h4>Life Time Upgrade</h4>
@@ -643,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="col-md-3 form-group">
                   <div class="card p-1">
                      <div class="card-header">
-                        <div class="text-center"><img class="lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/programme/icon2.png"></div>
+                        <div class="text-center"><img class="lazy" src="./assets/images/courses/devOps/icon2.png"></div>
                      </div>
                      <div class="card-body p-2">
                         <h4>2+ Capstone Projects & 30+ Assignments</h4>
@@ -653,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="col-md-3 form-group">
                   <div class="card p-1">
                      <div class="card-header">
-                        <div class="text-center"><img class="lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/programme/icon3.png">
+                        <div class="text-center"><img class="lazy" src="./assets/images/courses/devOps/icon3.png">
                         </div>
                      </div>
                      <div class="card-body p-2">
@@ -664,7 +665,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="col-md-3 form-group">
                   <div class="card p-1">
                      <div class="card-header">
-                        <div class="text-center"><img class="lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/programme/icon4.png"></div>
+                        <div class="text-center"><img class="lazy" src="./assets/images/courses/devOps/icon4.png"></div>
                      </div>
                      <div class="card-body p-2">
                         <h4>7 FREE Value-Added Courses</h4>
@@ -679,7 +680,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <div class="container mb-5">
             <h3 class="mt-3 mb-4 font-600">Skills Covered</h3>
             <div class="text-center">
-               <img class="lazy" src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/Tools_01.svg" style="width: 100%;" class="img-fluid">
+               <img class="lazy" src="./assets/images/courses/devOps/Tools_01.svg" style="width: 100%;" class="img-fluid">
             </div>
          </div> 
       </div>
@@ -689,74 +690,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="mt-3 mb-4 font-600">Tools and Technologies</h3>
             <div class="row text-center">
                <div class="col-4 col-md-2 border-right">
-                  <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-1.png" class="img-fluid lazy">
+                  <img src="./assets/images/courses/devOps/tool-1.png" class="img-fluid lazy">
                   <p>Eclipse IDE</p>
             </div>
-               <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-2.png" class="img-fluid lazy">
+               <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-2.png" class="img-fluid lazy">
                <p>Git and GitHub</p></div>
-               <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-3.png" class="img-fluid lazy">
+               <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-3.png" class="img-fluid lazy">
                <p>Amazon EC2</p></div>
-               <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-4.png" class="img-fluid lazy">
+               <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-4.png" class="img-fluid lazy">
                <p>Putty and Puttygen</p></div>
-               <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-5.png" class="img-fluid lazy">
+               <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-5.png" class="img-fluid lazy">
                <p>Maven</p></div>
-               <div class="col-4 col-md-2"><img src="assets/images/tools/tool-7.png" class="img-fluid lazy">
+               <div class="col-4 col-md-2"><img src="./assets/images/courses/devOps/tool-7.png" class="img-fluid lazy">
                <p>Jenkins</p></div>
             </div>
             <div ng-show="showmore == 1">
                <div class="row text-center">
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-6.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-6.png" class="img-fluid lazy">
                   <p>JUnit</p></div>
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-8.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-8.png" class="img-fluid lazy">
                   <p>BlazeMeter</p></div>
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-9.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-9.png" class="img-fluid lazy">
                   <p>Containers and Dockers</p></div>
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-10.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-10.png" class="img-fluid lazy">
                   <p>Kubernetes</p></div>
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-11.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-11.png" class="img-fluid lazy">
                   <p>Terraform</p></div>
-                  <div class="col-4 col-md-2"><img src="assets/images/tools/tool-12.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2"><img src="./assets/images/courses/devOps/tool-12.png" class="img-fluid lazy">
                   <p>Prometheus and Grafana</p></div>
                </div>
                <div class="row text-center">  
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-13.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-13.png" class="img-fluid lazy">
                   <p>ELK Stack</p></div>
-                  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-14.png" class="img-fluid lazy">
+                  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-14.png" class="img-fluid lazy">
                   <p>Overview AWS of DevOps</p></div>
 				  
 				  
 				  
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-15.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-15.png" class="img-fluid lazy">
                   <p>Ansible</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-16.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-16.png" class="img-fluid lazy">
                   <p>Atlassian</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-17.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-17.png" class="img-fluid lazy">
                   <p>JFrog</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-18.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-18.png" class="img-fluid lazy">
                   <p>MSBuild</p></div>
 				</div>
 				  
 				  <div class="row text-center">
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-19.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-19.png" class="img-fluid lazy">
                   <p>Nexus</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-20.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-20.png" class="img-fluid lazy">
                   <p>Puppet</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-21.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-21.png" class="img-fluid lazy">
                   <p>Sonarqube</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-22.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-22.png" class="img-fluid lazy">
                   <p>TeamCity</p></div>
-				  <div class="col-4 col-md-2 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/tools/tool-23.png" class="img-fluid lazy">
+				  <div class="col-4 col-md-2 border-right"><img src="./assets/images/courses/devOps/tool-23.png" class="img-fluid lazy">
                   <p>XL_Deploy</p></div>
                </div>
                 
                </div>
             </div>   
-            <div class="text-center mt-4 mb-4" ng-show="showmore==0">
+<!--             <div class="text-center mt-4 mb-4" ng-show="showmore==0">
                <button type="button" class="btn btn-primary btn-sm" ng-click="clickformore()">Show More...</button>
             </div>
             <div class="text-center mt-4 mb-4" ng-show="showmore==1">
                <button type="button" class="btn btn-primary btn-sm" ng-click="clickforless()">Hide More...</button>
-            </div>
+            </div> -->
          </div>
       </div>
        <div style="background:url(assets/images/5in1cert.jpg) repeat; padding:20px 0; width:100%;">
@@ -765,13 +766,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	 		<!---<img src="assets/images/5in1cert.png" class="img-fluid">-->
          <div class="row justify-content-center">
                <div class="col-6 col-md-3">
-                  <img src="./assets/images/2in1certification1.png" class="img-fluid w-100 lazy">
+                  <img src="./assets/images/courses/devOps/2in1certification1.png" class="img-fluid w-100 lazy">
                </div>
                <div class="col-6 col-md-3">
-                  <img src="./assets/images/2in1certification2.png" class="img-fluid w-100 lazy">
+                  <img src="./assets/images/courses/devOps/2in1certification2.png" class="img-fluid w-100 lazy">
                </div>
 			   <div class="col-6 col-md-3">
-                  <img src="./assets/images/4in2.png" class="img-fluid w-100 lazy">
+                  <img src="./assets/images/courses/devOps/4in2.png" class="img-fluid w-100 lazy">
                </div>
          </div>   
 	 		<!-- <img src="./assets/images/3in1certification.png" class="img-fluid w-100 lazy"> -->
@@ -818,7 +819,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="learning-path">
          <div class="container">
             <h3 class="mt-3 mb-4 font-600 text-white">Learning Path</h3>
-            <img src="assets/images/process_lp_aws.png" class="img-fluid w-100 lazy">
+            <img src="./assets/images/courses/devOps/process_lp_aws.png" class="img-fluid w-100 lazy">
          </div>
       </div>
       <div class="container" id="why-excelr">
@@ -828,7 +829,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon1.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon1.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-2">
                               <p class="mb-0">Projects on Kaggle Platform</p>
@@ -842,7 +843,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon2.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon2.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Industry-Based Course Curriculum</p>
@@ -856,7 +857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon3.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon3.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Get Basics of R & Python</p>
@@ -870,7 +871,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon4.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon4.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Get Value-Add Live Courses Of Linux, Kubernetes and more</p>
@@ -884,7 +885,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon5.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon5.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0"> Experienced Faculty From IIT, IIM & ISB</p>
@@ -898,7 +899,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon6.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon6.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Work Hands-on with 2+ Live Projects</p>
@@ -912,7 +913,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon7.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon7.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Dedicated Placement cell for 100% Placement Assistance</p>
@@ -926,7 +927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon8.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon8.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Project Code stored on Github &amp; Deployed on Heroku</p>
@@ -940,7 +941,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon9.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon9.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Dedicated Case Studies Support Team</p>
@@ -954,7 +955,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon10.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon10.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Support through Whatsapp</p>
@@ -968,7 +969,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/why/we_icon11.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="./assets/images/why/we_icon11.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Lifetime LMS Access</p>
@@ -982,7 +983,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="card position-relative">
                   <div class="card-body">
                      <div class="row no-gutters">
-                        <div class="col-4 col-md-4 border-right"><img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="assets/images/why/we_icon12.png" class="img-fluid lazy"></div>
+                        <div class="col-4 col-md-4 border-right"><img src="assets/images/why/we_icon12.png" class="img-fluid lazy"></div>
                         <div class="col-8 col-md-8 align-self-center">
                            <div class="pl-3">
                               <p class="mb-0">Get access to free Guest Lectures & Webinars</p>
@@ -1000,7 +1001,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row justify-content-center">
                <div class="col-md-5">
                   <div class="card mb-3">
-                     <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/Data_Science_IBM.png" class="img-fluid lazy">
+                     <img src="./assets/images/Data_Science_IBM.png" class="img-fluid lazy">
                   </div>
                   <h5 class="text-blue text-center">IBM Certification</h5>
                </div>
@@ -1008,7 +1009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                </div>
                <div class="col-md-3">
                   <div class="card">
-                     <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/ajax-loader.gif" data-src="./assets/images/Steinbeis.jpg" class="img-fluid lazy">
+                     <img src="./assets/images/Steinbeis.jpg" class="img-fluid lazy">
                   </div>
                </div> 
             </div>
@@ -1325,7 +1326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script src="./assets/js/bootstrap.min.js"></script>
       <script src="./assets/js/jquery.validate.min.js" type="text/javascript"></script>
       <script src="./assets/js/jquery-validate.bootstrap-tooltip.min.js" type="text/javascript"></script>
-      <script type="text/javascript" src="../data_science_course_training/validation.js"></script>
+      <script type="text/javascript" src="./assets/js/validation.js"></script>
 <script type="text/javascript">
          $(window).scroll(function(){
          	var scroll = $(window).scrollTop();
@@ -1363,6 +1364,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          });
 		 
          </script>
-       <script type="text/javascript" src="../webengage/zopimandlazzy.js"></script>
+       <!-- <script type="text/javascript" src="../webengage/zopimandlazzy.js"></script> -->
    </body>
 </html>
