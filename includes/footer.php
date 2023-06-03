@@ -2,15 +2,17 @@
     <div class="container">
       <div class="text-center hidden-xs">
         <ul class="implinks">
-          <li><a href="" data-toggle="modal" data-target="#myModal" class="mobileRequestBtn"><i class="fa fa-envelope-o" aria-hidden="true"></i> Drop A Query</a></li>
-          <li><a href="" data-toggle="modal" data-target="#myModal" class="mobileRequestBtn"><i class="fa fa-mobile"></i> Request A Callback</a></li>
+          <li><a href="" data-toggle="modal" data-target="#myModal" class="mobileRequestBtn" onclick="setLocationVariable('From Home page Footer')">
+            <i class="fa fa-envelope-o" aria-hidden="true" ></i> Drop A Query
+        </a></li>
+          <li><a href="" data-toggle="modal" data-target="#myModal" class="mobileRequestBtn" onclick="setLocationVariable('From Home page Footer')"><i class="fa fa-mobile"></i> Request A Callback </a></li>
           <li><a href=""><i class="fa fa-phone"></i>  +91 8217268018</a></li>
         </ul>
       </div>
       <div class="text-center hidden-lg">
         <div class="termsandcds mt-0">
-          <a href="" data-toggle="modal" data-target="#myModal" class="desktopRequestBtn"><i class="fa fa-envelope-o" aria-hidden="true"></i> Drop A Query</a>
-          <a href="" data-toggle="modal" data-target="#myModal" class="desktopRequestBtn"><i class="fa fa-mobile"></i> Request A Callback</a></li>
+          <a href="" data-toggle="modal" data-target="#myModal" class="desktopRequestBtn" onclick="setLocationVariable('From Home page Footer')"><i class="fa fa-envelope-o" aria-hidden="true"></i> Drop A Query</a>
+          <a href="" data-toggle="modal" data-target="#myModal" class="desktopRequestBtn" onclick="setLocationVariable('From Home page Footer')"><i class="fa fa-mobile"></i> Request A Callback</a></li>
         </div>
         <div class="termsandcds mb-3">
           <a href=""><i class="fa fa-phone"></i>  +91 8217268018</a>
@@ -73,10 +75,10 @@
                   <hr class="m-0" />
                </div>
                <div class="modal-body pt-0">
-                  <h4 class="p-3 m-0 text-center">Register now 1</h4>
+                  <h4 class="p-3 m-0 text-center">Register now</h4>
                   <!-- <h5 class="text-center text-success">{{success}}</h5> -->
                   <span class="text-center text-danger" id="homePageRequestFormErrorMsg"></span>
-                  <form name="homePageRequestForm"  method="post">
+                  <form name="homePageRequestForm"  method="post" action="thankyou.php">
                      <div class="form-group">
                         <input type="text" ng-model="enq.name" name="name" id="hp_username" placeholder="Name*" class="form-control" required/>
                      </div>
@@ -93,12 +95,13 @@
                         <input type="text" ng-model="enq.city" name="city" id="hp_city" placeholder="City*" class="form-control" required/>
                      </div>
                      <div class="form-group">
+                        <input type="hidden" name="location"  id="requestlocation" value="">
                         <input type="checkbox" name="terms" id="terms" checked required/>
                         <span class="text-dark">I hereby accepting agree the <a href="https://www.excelr.com/terms-and-conditions/" target="_blank">terms and conditions</a> and <a href="https://www.excelr.com/privacy-policy/" target="_blank">privacy policy</a> of AIT ExcelR Solutions</span>
                      </div>
                      <div style="clear:both"></div>
                      <div class="text-center mb-5">
-                        <button type="button" name="curriculm" id="homePageRequestFormSubmitBtn" class="btn btn-info btn-round">Register</button></div>
+                        <button type="submit" name="curriculm" id="" class="btn btn-info btn-round">Register</button></div>
                      <br /><br /><br /><br /><br />
                   </form>
                </div>
@@ -388,6 +391,11 @@ $(function () {
         // instead of a settings object
         ]
     });
+
+    function setLocationVariable(localtion)
+    {
+       document.getElementById('requestlocation').value = localtion;
+    }
 
 </script>
    </body>

@@ -18,11 +18,11 @@
 
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon"> -->
-      <title>Data Science Course | Data Scientist Training from SGIT</title>
+      <title><?php echo $_SESSION['course_name']; ?></title>
    </head>
    <body>
        <a href="tel: +91 8217268018" class="stikeymobile"><i class="fa fa-phone text-white"></i></a>
-	 <a href="#" class="reqcallback d-none d-sm-block sideRequest" data-toggle="modal" data-target="#myModal" >Request a call back</a>
+	 <a href="#" class="reqcallback d-none d-sm-block sideRequest" onclick="setLocationVariable('Enquiry button from Window Rightside')" data-toggle="modal" data-target="#myModal" >Request a call back -  1</a>
 	<nav class="navbar">
 		<div class="container">
 			<a class="navbar-brand" href="https://www.achieversit.in/">

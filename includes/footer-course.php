@@ -10,7 +10,7 @@
                            <h3 class="font-20 mb-0">Register for the webinar</h3>
                         </div>
                         <div class="card-body" style="min-height:auto">
-                           <form name="formvalidate4" id="formvalidate4" method="post" ng-submit="formsubmit4(enq)">
+                           <form name="formvalidate4" id="formvalidate4" method="post" action="thankyou.php">
                               <div class="form-group">
                                  <input type="text" ng-model="enq.name" name="name" id="name" placeholder="Name*"
                                     class="form-control" required />
@@ -48,8 +48,8 @@
                   <hr class="m-0" />
                </div>
                <div class="modal-body pt-0">
-                  <h4 class="p-3 m-0 text-center">Register now</h4>
-                  <form name="modalonload" id="modalonload" method="post" ng-submit="submitmodalonload(enq)">
+                  <h4 class="p-3 m-0 text-center">Register now C1</h4>
+                  <form name="modalonload" id="modalonload" method="post" action="thankyou.php">
                      <div class="form-group">
                         <input type="text" ng-model="enq.name" name="name" id="name" placeholder="Name*"
                            class="form-control" required />
@@ -63,6 +63,7 @@
                            class="form-control" required />
                      </div>
                      <div class="form-group">
+                        <input type="hidden" name="location" value="onloadpopup">
                         <input type="checkbox" name="terms" id="terms" checked required />
                         <span class="text-dark">I hereby accepting agree the <a
                            href="https://www.excelr.com/terms-and-conditions/" target="_blank">terms and conditions</a>
@@ -70,7 +71,8 @@
                         AchieversIT</span>
                      </div>
                      <div style="clear:both"></div>
-                     <div class="text-center mb-5" ng-show="processing==0"><button type="submit" name="curriculm"
+                     <div class="text-center mb-5" ng-show="processing==0">
+                        <button type="submit" name="curriculm"
                         id="curriculm" class="btn btn-info btn-round">Register</button></div>
                      <h5 class="text-center mb-5" ng-show="processing==1">Please Wait...</h5>
                      <br /><br /><br /><br /><br />
@@ -90,21 +92,22 @@
                   <hr class="m-0" />
                </div>
                <div class="modal-body pt-0">
-                  <h4 class="p-3 m-0 text-center">Register now</h4>
-                  <form name="formvalidate2" id="formvalidate2" method="post" ng-submit="formsubmit2(enq)">
+                  <h4 class="p-3 m-0 text-center">Register now C2</h4>
+                  <form name="formvalidate2" id="formvalidate2 rightPanelRequestCallBackForm" action="thankyou.php" method="post">
                      <div class="form-group">
-                        <input type="text" ng-model="enq.name" name="name" id="name" placeholder="Name*"
+                        <input type="text" name="name" id="c2_user_name" placeholder="Name*"
                            class="form-control" required />
                      </div>
                      <div class="form-group">
-                        <input type="email" ng-model="enq.email" placeholder="E-mail*" name="email" id="email"
+                        <input type="email" placeholder="E-mail*" name="email" id="c2_user_email"
                            class="form-control" required />
                      </div>
                      <div class="form-group">
-                        <input type="text" ng-model="enq.mobile" placeholder="Mobile Number*" name="mobile" id="mobile"
+                        <input type="text" placeholder="Mobile Number*" name="mobile" id="c2_user_mobile"
                            class="form-control" required />
                      </div>
                      <div class="form-group">
+                        <input type="hidden" name="location" value="courses_sidepanel_click">
                         <input type="checkbox" name="terms" id="terms" checked required />
                         <span class="text-dark">I hereby accepting agree the <a
                            href="https://www.excelr.com/terms-and-conditions/" target="_blank">terms and conditions</a>
@@ -112,9 +115,10 @@
                         AchieversIT Solutions</span>
                      </div>
                      <div style="clear:both"></div>
-                     <div class="text-center mb-5" ng-show="processing==0"><button type="submit" name="curriculm"
-                        id="curriculm" class="btn btn-info btn-round">Register</button></div>
-                     <h5 class="text-center mb-5" ng-show="processing==1">Please Wait...</h5>
+                     <div class="text-center mb-5" ng-show="processing==0">
+                        <button type="submit" name="curriculm"
+                        id="rightPanelRequestCallBacks" class="btn btn-info btn-round">Register</button></div>
+                     <h5 class="text-center mb-5" style="display:none" ng-show="processing==1">Please Wait...</h5>
                      <br /><br /><br /><br /><br />
                   </form>
                </div>
@@ -132,8 +136,8 @@
                   <hr class="m-0" />
                </div>
                <div class="modal-body pt-0">
-                  <h4 class="p-3 m-0 text-center">Register now</h4>
-                  <form name="formvalidate3" id="formvalidate3" method="post" ng-submit="formsubmit3(enq)">
+                  <h4 class="p-3 m-0 text-center">Register now C3</h4>
+                  <form name="formvalidate3" id="formvalidate3" method="post" action="thankyou.php">
                      <div class="form-group">
                         <input type="text" ng-model="enq.name" name="name" id="name" placeholder="Name*"
                            class="form-control" required />
@@ -147,6 +151,7 @@
                            class="form-control" required />
                      </div>
                      <div class="form-group">
+                        <input type="hidden" name="location" value="footersection">
                         <input type="checkbox" name="terms" id="terms" checked required />
                         <span class="text-dark">I hereby accepting agree the <a
                            href="https://www.excelr.com/terms-and-conditions/" target="_blank">terms and conditions</a>
@@ -203,5 +208,53 @@
          
       </script>
       <script type="text/javascript" src="./assets/js/zopimandlazzy.js"></script>
+      <script>
+         $("#rightPanelRequestCallBack").click(function(){
+      
+      let proceed = 0;
+      let payload = {};
+      let user_name = $("#c2_user_name");
+      let user_name_val = user_name.val();
+      if(user_name_val.trim().length == 0)
+      {
+         proceed++;
+      } else {
+         payload['user_name'] = user_name_val.trim();
+      }
+
+      let c2_user_email = $("#c2_user_email");
+      let c2_user_email_val = c2_user_email.val();
+      if(c2_user_email_val.trim().length == 0)
+      {
+         proceed++;
+      } else {
+         payload['user_email'] = c2_user_email_val.trim();
+      }
+
+      let c2_user_mobile = $("#c2_user_mobile");
+      let c2_user_mobile_val = c2_user_mobile.val();
+      if(c2_user_mobile_val.trim().length == 0)
+      {
+         proceed++;
+      } else {
+         payload['user_mobile'] = c2_user_mobile_val.trim();
+      }
+      if(proceed == 0)
+      {
+         let data = JSON.stringify(payload);
+         const url = "recordRequest.php";
+         let xhr = new XMLHttpRequest()
+         xhr.open('POST', url, true)
+         xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+         xhr.send(data);
+         xhr.onload = function () {
+             if(xhr.status === 200) {
+                 console.log("Post successfully created!") 
+             }
+         }
+
+      }
+   });
+      </script>
    </body>
 </html>
